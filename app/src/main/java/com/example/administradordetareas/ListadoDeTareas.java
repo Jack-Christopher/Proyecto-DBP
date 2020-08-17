@@ -100,6 +100,10 @@ public class ListadoDeTareas extends AppCompatActivity
                     {
                         newHora += "0"+ minutos;
                     }
+                    else
+                    {
+                        newHora +=  minutos;
+                    }
 
                     String linea = c.getString(0) + "  -->  " + c.getString(1) +
                             " ( " + newHora + " )"  + " ::  " + c.getString(3);
