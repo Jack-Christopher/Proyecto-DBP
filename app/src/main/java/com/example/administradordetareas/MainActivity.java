@@ -79,6 +79,12 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
     private void Guardar(String newEvento, String newFecha, String newHora,String newDescripcion)
     {
+        if (newEvento.isEmpty() || (newFecha.isEmpty() ||newDescripcion.isEmpty()))
+        {
+            Toast.makeText(this, "Hay campos vacíos", Toast.LENGTH_SHORT).show();
+            return;
+        }    
+    
         BaseHelper helper = new BaseHelper(this);
         SQLiteDatabase db = helper.getWritableDatabase();
         try
