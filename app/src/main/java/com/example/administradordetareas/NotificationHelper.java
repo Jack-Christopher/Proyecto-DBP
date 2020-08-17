@@ -7,11 +7,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.os.Build;
-
-import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
-
-import java.security.PublicKey;
 
 public class NotificationHelper extends ContextWrapper
 {
@@ -32,7 +28,7 @@ public class NotificationHelper extends ContextWrapper
     @TargetApi(Build.VERSION_CODES.O)
     public void createChannel()
     {
-        NotificationChannel channel = new NotificationChannel(channelID, channelName, NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationChannel channel = new NotificationChannel(channelID, channelName, NotificationManager.IMPORTANCE_HIGH);
         channel.enableLights(true);
         channel.enableVibration(true);
         channel.setLightColor(R.color.colorPrimary);

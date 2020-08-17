@@ -5,8 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
-import androidx.annotation.Nullable;
-
 public class BaseHelper extends SQLiteOpenHelper
 {
     public static final String SQL_CREATE_ENTRIES =

@@ -94,8 +94,15 @@ public class ListadoDeTareas extends AppCompatActivity
             Cursor c = db.rawQuery(sql, null);
             if (c.moveToFirst()) {
                 do {
+                    String newHora= c.getString(2).split(":")[0] + ":";
+                    String minutos = c.getString(2).split(":")[1];
+                    if(Integer.parseInt(minutos) < 10)
+                    {
+                        newHora += "0"+ minutos;
+                    }
+
                     String linea = c.getString(0) + "  -->  " + c.getString(1) +
-                            " ( " + c.getString(2) + " )"  + " ::  " + c.getString(3);
+                            " ( " + newHora + " )"  + " ::  " + c.getString(3);
                     datos.add(linea);
                 }
                 while (c.moveToNext());
