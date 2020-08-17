@@ -1,15 +1,15 @@
 # Manual de Instrucciones del Proyecto de DBP
 
 Activities:
-- MainActivity
-- Modificar
-- ListadoDeTareas
+- MainActivity: Es el encargado de mostrar las opciones para insertar eventos.
+- Modificar: Es el encargado de mostrar las opciones para modificar los eventos ya insertados.
+- ListadoDeTareas: Es el encargado de mostrar en pantalla los elementos que han sido almacenados en la Base de Datos.
 
 Clases:
-- BaseHelper
-- AlertReceiver
-- NotificationHelper
-- TimePickerFragment
+- BaseHelper: Ayuda a ser más seguro el manejo de la Base de Datos
+- AlertReceiver: Permite recepcionar la notificación en el momento en el que se debe recibir el recordatorio de la alarma.
+- NotificationHelper: Pemite crear las notificaciones y sus características para ser mostradas luego.
+- TimePickerFragment: Permite seleccionar la hora en la cual se debe realizar el Recordatorio.
 
 
 Al iniciar la aplicación, la pantalla por defecto es la MainActivity con la que se puede ingresar un nuevo evento realizando la consulta INSERT de la Base de Datos.
